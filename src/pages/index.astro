@@ -1,11 +1,23 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BgContainer from '../components/BgContainer.astro';
+import WakeMain from '../components/WakeMain.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<BgContainer backgroundImage="/bgs/wake-primary-bg.jpeg">
+		<WakeMain />
+	</BgContainer>
+	<BgContainer backgroundImage="/bgs/wake-gradient2-bg.jpg">
+        <h1 class="text-4xl font-bold">Hello World</h1>
+	</BgContainer>
+	<BgContainer backgroundImage="/bgs/wake-data-bg.webp">
+        <h1 class="text-4xl font-bold">Hello World</h1>
+	</BgContainer>
+	<BgContainer backgroundImage="/bgs/wake-gradient-bg.jpg">
+        <h1 class="text-4xl font-bold">Hello World</h1>
+	</BgContainer>
+	<BgContainer backgroundImage="/bgs/wake-code-bg.webp">
+        <h1 class="text-4xl font-bold">Hello World</h1>
+	</BgContainer>
 </Layout>

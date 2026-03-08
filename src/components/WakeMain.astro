@@ -1,0 +1,39 @@
+---
+// Navegación: mismo orden que en la imagen
+const navItems = [
+	{ label: 'Nosotros', href: '#nosotros' },
+	{ label: 'Servicios', href: '#servicios' },
+	{ label: 'Casos de éxito', href: '#casos' },
+	{ label: 'Precios', href: '#precios' },
+];
+---
+
+<article class="flex flex-col gap-2 h-full">
+    <header class="hidden md:flex items-center justify-center px-4 py-5 md:py-16">
+        <nav class="flex items-center justify-center gap-4 md:gap-28 w-full">
+            {navItems.map((item) => (
+                <a href={item.href} class="text-2xl font-semibold uppercase tracking-wide text-white transition hover:scale-105">{item.label}</a>
+            ))}
+        </nav>
+    </header>
+    <main class="flex flex-1 flex-col items-end justify-center px-4 py-8 text-center md:py-12 pr-24 gap-4">
+        <h1 class="text-5xl font-extrabold uppercase text-white drop-shadow-sm sm:text-6xl md:text-7xl lg:text-8xl xl:text-[12rem] tracking-wider">WAKE</h1>
+        <h2 class="text-3xl font-semibold uppercase tracking-wide text-white">
+            DIGITALIZA. OPTIMIZA. CRECE.
+        </h2>
+        <h3 class="text-2xl uppercase tracking-wide text-white w-1/4 text-right">
+            Soluciones tecnológicas para tu negocio.
+        </h3>
+        <button
+            class="px-8 py-4 rounded-full text-2xl font-semibold uppercase text-white transition hover:scale-105 tracking-wider"
+            style="background: linear-gradient(90deg, #8c52ff 0%, #ff914d 100%);"
+        >
+            Solicita un demo
+        </button>
+    </main>
+    <footer class="flex items-center justify-center px-4 py-5 md:py-16 text-white">
+        <h2>
+            &copy; {new Date().getFullYear()} Wake Solutions. Todos los derechos reservados.
+        </h2>
+    </footer>
+</article>
